@@ -1,6 +1,17 @@
-# Simple Shopping Cart for PHP
+[![Stories in Ready](https://badge.waffle.io/voku/cart.png?label=ready&title=Ready)](https://waffle.io/voku/cart)
+[![Build Status](https://api.travis-ci.org/voku/cart.svg?branch=master)](https://travis-ci.org/voku/cart)
+[![Coverage Status](https://coveralls.io/repos/voku/cart/badge.svg?branch=master&service=github)](https://coveralls.io/github/voku/cart?branch=master)
+[![codecov.io](https://codecov.io/github/voku/cart/coverage.svg?branch=master)](https://codecov.io/github/voku/cart?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/voku/cart/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/voku/cart/?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/5de40c3fa1b94005b17d8fbfa7142c06)](https://www.codacy.com/app/voku/cart)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/46c3621a-a3ed-4ee6-8fa1-359653ddb1ba/mini.png)](https://insight.sensiolabs.com/projects/46c3621a-a3ed-4ee6-8fa1-359653ddb1ba)
+[![Latest Stable Version](https://poser.pugx.org/voku/cart/v/stable)](https://packagist.org/packages/voku/cart) 
+[![Total Downloads](https://poser.pugx.org/voku/cart/downloads)](https://packagist.org/packages/voku/cart) 
+[![Latest Unstable Version](https://poser.pugx.org/voku/cart/v/unstable)](https://packagist.org/packages/voku/cart)
+[![PHP 7 ready](http://php7ready.timesplinter.ch/voku/cart/badge.svg)](https://travis-ci.org/voku/cart)
+[![License](https://poser.pugx.org/voku/cart/license)](https://packagist.org/packages/voku/cart)
 
-[![Build Status](https://secure.travis-ci.org/voku/cart.png)](http://travis-ci.org/voku/cart)
+# Simple Shopping Cart for PHP
 
 * [Website](https://github.com/voku/cart)
 * [License](https://github.com/voku/cart/master/LICENSE)
