@@ -1,12 +1,11 @@
-# Shopping Cart Package
+# Simple Shopping Cart for PHP
 
-[![Build Status](https://secure.travis-ci.org/moltin/cart.png)](http://travis-ci.org/moltin/cart)
+[![Build Status](https://secure.travis-ci.org/voku/cart.png)](http://travis-ci.org/voku/cart)
 
 * [Website](http://molt.in)
 * [License](https://github.com/moltin/cart/master/LICENSE)
-* Version: dev
 
-The Moltin shopping cart composer package makes it easy to implement a shopping basket into your application and
+This simple shopping cart composer package makes it easy to implement a shopping basket into your application and
 store the cart data using one of the numerous data stores provided. You can also inject your own data store if you
 would like your cart data to be stored elsewhere.
 
@@ -17,7 +16,7 @@ Add the following to your project `composer.json` file
 ```
 {
     "require": {
-        "moltin/cart": "dev-master"
+        "voku/cart": "1.*"
     }
 }
 ```
@@ -34,9 +33,9 @@ other way of storing an identifier) so we can link the user to a stored cart.
 In this example we're going to use the cookie identifier and session for storage.
 
 ```php
-use Moltin\Cart\Cart;
-use Moltin\Cart\Storage\Session;
-use Moltin\Cart\Identifier\Cookie;
+use voku\Cart\Cart;
+use voku\Cart\Storage\Session;
+use voku\Cart\Identifier\Cookie;
 
 $cart = new Cart(new Session, new Cookie);
 ```
@@ -45,12 +44,14 @@ $cart = new Cart(new Session, new Cookie);
 Inserting an item into the cart is easy. The required keys are id, name, price and quantity, although you can pass
 over any custom data that you like.
 ```php
-$cart->insert(array(
+$cart->insert(
+  array(
     'id'       => 'foo',
     'name'     => 'bar',
     'price'    => 100,
     'quantity' => 1
-));
+  )
+);
 ```
 
 ### Setting the tax rate for an item
@@ -60,13 +61,15 @@ the price of the item.
 In the below example we will use 20% for the tax rate.
 
 ```php
-$cart->insert(array(
+$cart->insert(
+  array(
     'id'       => 'foo',
     'name'     => 'bar',
     'price'    => 100,
     'quantity' => 1,
     'tax'      => 20
-));
+  )
+);
 ```
 
 ### Updating items in the cart
@@ -74,8 +77,8 @@ You can update items in your cart by updating any property on a cart item. For e
 cart loop then you can update a specific item using the below example.
 ```php
 foreach ($cart->contents() as $item) {
-    $item->name = 'Foo';
-    $item->quantity = 1;
+  $item->name = 'Foo';
+  $item->quantity = 1;
 }
 ```
 
@@ -83,7 +86,7 @@ foreach ($cart->contents() as $item) {
 You can remove any items in your cart by using the ```remove()``` method on any cart item.
 ```php
 foreach ($cart->contents() as $item) {
-    $item->remove();
+  $item->remove();
 }
 ```
 
@@ -161,7 +164,7 @@ You can check if a cart item has options by using the ```hasOptions()``` method.
 
 ```php
 if ($item->hasOptions()) {
-    // We have options
+  // We have options
 }
 ```
 
