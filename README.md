@@ -1,6 +1,6 @@
 [![Stories in Ready](https://badge.waffle.io/voku/cart.png?label=ready&title=Ready)](https://waffle.io/voku/cart)
 [![Build Status](https://api.travis-ci.org/voku/cart.svg?branch=master)](https://travis-ci.org/voku/cart)
-[![Coverage Status](https://coveralls.io/repos/voku/cart/badge.svg?branch=master&service=github)](https://coveralls.io/github/voku/cart?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/voku/cart/badge.svg?branch=master)](https://coveralls.io/github/voku/cart?branch=master)
 [![codecov.io](https://codecov.io/github/voku/cart/coverage.svg?branch=master)](https://codecov.io/github/voku/cart?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/voku/cart/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/voku/cart/?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/5de40c3fa1b94005b17d8fbfa7142c06)](https://www.codacy.com/app/voku/cart)
