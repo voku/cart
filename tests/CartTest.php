@@ -111,7 +111,7 @@ class CartTest extends \PHPUnit_Framework_TestCase
 
     $identifier = md5('foo' . serialize(array()));
 
-    self::assertEquals($identifier, $actualId);
+    self::assertSame($identifier, $actualId);
   }
 
 
@@ -126,7 +126,7 @@ class CartTest extends \PHPUnit_Framework_TestCase
         )
     );
 
-    self::assertEquals(150, $this->cart->total());
+    self::assertSame(150.0, $this->cart->total());
 
     $this->cart->insert(
         array(
@@ -137,7 +137,7 @@ class CartTest extends \PHPUnit_Framework_TestCase
         )
     );
 
-    self::assertEquals(300, $this->cart->total());
+    self::assertSame(300.0, $this->cart->total());
 
     $this->cart->insert(
         array(
@@ -148,7 +148,7 @@ class CartTest extends \PHPUnit_Framework_TestCase
         )
     );
 
-    self::assertEquals(600, $this->cart->total());
+    self::assertSame(600.0, $this->cart->total());
   }
 
   public function testInsertIncrements()
@@ -157,12 +157,12 @@ class CartTest extends \PHPUnit_Framework_TestCase
         array(
             'id'       => 'foo',
             'name'     => 'bar',
-            'price'    => 150,
+            'price'    => 150.0,
             'quantity' => 1,
         )
     );
 
-    self::assertEquals(150, $this->cart->total());
+    self::assertSame(150.0, $this->cart->total());
 
     $this->cart->insert(
         array(
@@ -173,7 +173,7 @@ class CartTest extends \PHPUnit_Framework_TestCase
         )
     );
 
-    self::assertEquals(300, $this->cart->total());
+    self::assertSame(300.0, $this->cart->total());
 
     $this->cart->insert(
         array(
@@ -184,7 +184,7 @@ class CartTest extends \PHPUnit_Framework_TestCase
         )
     );
 
-    self::assertEquals(600, $this->cart->total());
+    self::assertSame(600.0, $this->cart->total());
   }
 
   public function testItemRemoval()
@@ -238,7 +238,7 @@ class CartTest extends \PHPUnit_Framework_TestCase
       $item->name = 'baz';
     }
 
-    self::assertEquals($this->cart->item($actualId)->name, 'baz');
+    self::assertSame($this->cart->item($actualId)->name, 'baz');
   }
 
   public function testOptions()
@@ -279,12 +279,12 @@ class CartTest extends \PHPUnit_Framework_TestCase
     );
 
     // Test that the tax is being calculated successfully
-    self::assertEquals($this->cart->total(), 120);
-    self::assertEquals($this->cart->totalWithTax(), 120);
+    self::assertSame($this->cart->total(), 120.0);
+    self::assertSame($this->cart->totalWithTax(), 120.0);
 
     // Test that the total method can also return the pre-tax price if false is passed
-    self::assertEquals($this->cart->total(false), 100);
-    self::assertEquals($this->cart->totalWithoutTax(), 100);
+    self::assertSame($this->cart->total(false), 100.0);
+    self::assertSame($this->cart->totalWithoutTax(), 100.0);
   }
 
   public function testTotalItems()
@@ -307,9 +307,9 @@ class CartTest extends \PHPUnit_Framework_TestCase
       $actualTotal += $quantity;
     }
 
-    self::assertEquals($this->cart->totalItems(), $actualTotal);
-    self::assertEquals($this->cart->totalItems(true), $adding);
-    self::assertEquals($this->cart->totalUniqueItems(), $adding);
+    self::assertSame($this->cart->totalItems(), $actualTotal);
+    self::assertSame($this->cart->totalItems(true), $adding);
+    self::assertSame($this->cart->totalUniqueItems(), $adding);
   }
 
   public function testTotals()
@@ -328,7 +328,7 @@ class CartTest extends \PHPUnit_Framework_TestCase
     );
 
     // Test that the total is being calculated successfully
-    self::assertEquals($this->cart->total(), $price * $quantity);
+    self::assertSame($this->cart->total(), (float)$price * $quantity);
   }
 
   public function testUpdate()
@@ -344,6 +344,6 @@ class CartTest extends \PHPUnit_Framework_TestCase
 
     $this->cart->update($actualId, 'name', 'baz');
 
-    self::assertEquals($this->cart->item($actualId)->name, 'baz');
+    self::assertSame($this->cart->item($actualId)->name, 'baz');
   }
 }

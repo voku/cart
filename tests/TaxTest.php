@@ -37,29 +37,29 @@ class TaxTest extends \PHPUnit_Framework_TestCase
 
   public function testAdd()
   {
-    self::assertEquals($this->tax->add(100), 120);
+    self::assertSame($this->tax->add(100), 120.0);
   }
 
   public function testDecuct()
   {
-    self::assertEquals($this->tax->deduct(100), 80);
+    self::assertSame($this->tax->deduct(100), 80.0);
   }
 
   public function testModifiers()
   {
-    self::assertEquals($this->tax->addModifier, 1.2);
-    self::assertEquals($this->tax->deductModifier, 0.8);
+    self::assertSame($this->tax->addModifier, 1.2);
+    self::assertSame($this->tax->deductModifier, 0.8);
   }
 
   public function testPercentageCalculation()
   {
     $tax = new Tax(100, 120);
 
-    self::assertEquals($tax->rate(100), 20);
+    self::assertSame($tax->rate(100), 20.0);
   }
 
   public function testRate()
   {
-    self::assertEquals($this->tax->rate(100), 20);
+    self::assertSame($this->tax->rate(100), 20.0);
   }
 }
