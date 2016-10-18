@@ -19,8 +19,8 @@
  */
 
 use voku\Cart\Cart;
-use voku\Cart\Storage\Runtime as RuntimeStore;
 use voku\Cart\Identifier\Runtime as RuntimeIdentifier;
+use voku\Cart\Storage\Runtime as RuntimeStore;
 
 /**
  * Class CartTest

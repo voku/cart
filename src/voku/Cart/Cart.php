@@ -20,8 +20,6 @@
 
 namespace voku\Cart;
 
-use InvalidArgumentException;
-
 /**
  * Class Cart
  */
