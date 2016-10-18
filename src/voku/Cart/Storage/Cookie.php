@@ -48,7 +48,7 @@ class Cookie extends Runtime
    */
   public function setCookie()
   {
-    setcookie('cart', serialize(parent::$cart), time() + (86400 * 3), "/");
+    setcookie('cart', serialize(parent::$cart), time() + (86400 * 3), '/');
   }
 
 

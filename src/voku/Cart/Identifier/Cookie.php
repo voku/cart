@@ -35,7 +35,7 @@ class Cookie implements IdentifierInterface
    */
   public function forget()
   {
-    return setcookie('cart_identifier', null, time() - 3600, "/");
+    return setcookie('cart_identifier', null, time() - 3600, '/');
   }
 
   /**
@@ -61,7 +61,7 @@ class Cookie implements IdentifierInterface
   {
     $identifier = md5(uniqid(null, true));
 
-    setcookie('cart_identifier', $identifier, 0, "/");
+    setcookie('cart_identifier', $identifier, 0, '/');
 
     return $identifier;
   }
